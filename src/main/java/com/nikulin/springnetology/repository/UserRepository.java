@@ -1,10 +1,14 @@
-package com.nikulin.springnetology;
+package com.nikulin.springnetology.repository;
+
+import com.nikulin.springnetology.Authorities;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Repository
 public class UserRepository {
 
     private Map <String, List<Authorities>> users = new HashMap<>();

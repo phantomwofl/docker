@@ -1,4 +1,4 @@
-package com.nikulin.springnetology;
+package com.nikulin.springnetology.exception;
 
 public class UnauthorizedUser extends RuntimeException {
     public UnauthorizedUser(String msg) {

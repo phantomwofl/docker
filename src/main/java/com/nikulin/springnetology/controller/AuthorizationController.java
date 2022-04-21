@@ -1,5 +1,10 @@
-package com.nikulin.springnetology;
+package com.nikulin.springnetology.controller;
 
+import com.nikulin.springnetology.Authorities;
+import com.nikulin.springnetology.exception.InvalidCredentials;
+import com.nikulin.springnetology.exception.UnauthorizedUser;
+import com.nikulin.springnetology.service.AuthorizationService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -7,7 +12,9 @@ import java.util.List;
 
 @RestController
 public class AuthorizationController {
-    AuthorizationService service = new AuthorizationService();
+
+    @Autowired
+    private AuthorizationService service = new AuthorizationService();
 
     @GetMapping("/authorize")
     public List<Authorities> getAuthorities(@RequestParam("user") String user, @RequestParam("password") String password) {

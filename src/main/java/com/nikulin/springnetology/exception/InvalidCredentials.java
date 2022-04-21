@@ -1,4 +1,4 @@
-package com.nikulin.springnetology;
+package com.nikulin.springnetology.exception;
 
 public class InvalidCredentials extends RuntimeException {
     public InvalidCredentials(String msg) {
